@@ -54,5 +54,3 @@ function getComputerChoice() {
   }
 
   game();
-  
-console.log("It's a tie game!")
