@@ -1,56 +1,55 @@
+// script.js
+
+// Function to get computer choice
 function getComputerChoice() {
-    const choices = ['Rock', 'Paper', 'Scissors'];
-    const randomIndex = Math.floor(Math.random() * choices.length);
+    var choices = ["rock", "paper", "scissors"];
+    var randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
-  }
+}
 
-  function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase(); // Convert playerSelection to lowercase
-    computerSelection = computerSelection.toLowerCase(); // Convert computerSelection to lowercase
+// Function to play a single round of Rock Paper Scissors
+function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase(); // Convert to lowercase for case-insensitivity
 
-    if (playerSelection === computerSelection) {
-      return "It's a tie!";
-    }
-
-    if (
-      (playerSelection === 'rock' && computerSelection === 'scissors') ||
-      (playerSelection === 'paper' && computerSelection === 'rock') ||
-      (playerSelection === 'scissors' && computerSelection === 'paper')
-    ) {
-      return "You win! " + playerSelection + " beats " + computerSelection;
-    }
- 
-    return "You lose! " + computerSelection + " beats " + playerSelection;
-  }
-
-  function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-  
-    for (let i = 0; i < 5; i++) {
-      const playerSelection = prompt("Enter your choice: Rock, Paper, or Scissors");
-      const computerSelection = getComputerChoice();
-      const roundResult = playRound(playerSelection, computerSelection);
-      
-      console.log(roundResult);
-
-      if (roundResult.includes('win')) {
-        playerScore++;
-      } else if (roundResult.includes('lose')) {
-        computerScore++;
-      }
-    }
-
-    console.log("Player score: " + playerScore);
-    console.log("Computer score: " + computerScore);
-  
-    if (playerScore > computerScore) {
-      console.log("Congratulations! You win the game!");
-    } else if (playerScore < computerScore) {
-      console.log("Oops! You lose the game.");
+    if (computerSelection === playerSelection) {
+        return "It's a tie!";
+    } else if (computerSelection === "paper" && playerSelection === "rock" ||
+        computerSelection === "scissors" && playerSelection === "paper" ||
+        computerSelection === "rock" && playerSelection === "scissors") {
+        return "You Lose! " + computerSelection + " beats " + playerSelection;
     } else {
-      console.log("It's a tie game!");
+        return "You Win! " + playerSelection + " beats " + computerSelection;
     }
-  }
+}
 
-  game();
+var playerSelections = []; // Array to store player's choices
+
+// Function to handle player's choice selection
+function selectChoice(choice) {
+    playerSelections.push(choice);
+    var resultContainer = document.getElementById("result-container");
+    resultContainer.innerHTML = ""; // Clear previous results
+
+    if (playerSelections.length === 5) {
+        game(); // Call the game function after the player selects choices for all five rounds
+    }
+}
+
+// Function to play the game with 5 rounds and display the results
+function game() {
+    var resultContainer = document.getElementById("result-container");
+    for (var i = 0; i < playerSelections.length; i++) {
+        var computerSelection = getComputerChoice();
+        var playerSelection = playerSelections[i];
+        var result = playRound(playerSelection, computerSelection);
+        displayResult(result, resultContainer);
+    }
+    playerSelections = []; // Reset player's choices
+}
+
+// Function to display the result of each round
+function displayResult(result, container) {
+    var resultElement = document.createElement("p");
+    resultElement.textContent = result;
+    container.appendChild(resultElement);
+}
