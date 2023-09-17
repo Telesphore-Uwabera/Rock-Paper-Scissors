@@ -1,3 +1,4 @@
+
 # Rock Paper Scissors Game
 
 Welcome to the Rock Paper Scissors game! This simple web-based game allows you to play the classic Rock Paper Scissors game against a computer opponent.
@@ -27,21 +28,25 @@ There's no need for installation. Simply clone or download this repository to yo
 
 ```bash
 git clone <repository-url>
-Usage
-Play the game by clicking on the choice buttons.
-View the results of each round displayed on the page.
-Enjoy a simple and fun game of Rock Paper Scissors!
-Contributing
-Contributions are welcome!
+```
 
- If you'd like to contribute to the project, please follow these steps:
+## Usage
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them with descriptive commit messages.
-Push your changes to your forked repository.
-Submit a pull request to the main repository.
+- Play the game by clicking on the choice buttons.
+- View the results of each round displayed on the page.
+- Enjoy a simple and fun game of Rock Paper Scissors!
 
-License
+## Contributing
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
