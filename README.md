@@ -32,13 +32,16 @@ Play the game by clicking on the choice buttons.
 View the results of each round displayed on the page.
 Enjoy a simple and fun game of Rock Paper Scissors!
 Contributing
-Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+Contributions are welcome!
+
+ If you'd like to contribute to the project, please follow these steps:
 
 Fork the repository.
 Create a new branch for your feature or bug fix.
 Make your changes and commit them with descriptive commit messages.
 Push your changes to your forked repository.
 Submit a pull request to the main repository.
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
 
+License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
