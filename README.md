@@ -50,3 +50,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
+The link to the Rock Paper Scissors Game is https://telesphore-uwabera.github.io/Rock-Paper-Scissors/
